@@ -1,0 +1,29 @@
+{
+  "public": "dist",
+  "headers": [
+    {
+      "source": "*",
+      "headers": [
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "require-corp"
+        }
+      ]
+    },
+    {
+      "source": "*",
+      "headers": [
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/converter*",
+      "destination": "/index.html"
+    }
+  ]
+}
