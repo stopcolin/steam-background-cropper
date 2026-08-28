@@ -4,7 +4,7 @@ import { ImageInfo } from '@/types/image'
 
 // Served from public/ffmpeg (copied from @ffmpeg/core@0.12, single-thread build).
 // The core includes libaom, so AV1 source videos can be decoded.
-const CORE_BASE = '/ffmpeg'
+const CORE_BASE = `${import.meta.env.BASE_URL}ffmpeg`
 
 export interface ConvertCallbacks {
   onProgress?: (ratio: number) => void
